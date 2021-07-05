@@ -1,0 +1,36 @@
+@font-face {
+    font-family: "DINPro";
+    src: url("../Fonts/DINPro-Medium.otf");
+    font-style: normal;
+}
+
+.cardBody {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    transition: all .25s ease;
+}
+
+.cardBody:hover {
+    transform:scale(1.02);
+}
+
+.cardImage {
+    display: block;
+    object-fit:contain;
+    width: 100%;
+    height: auto;
+    justify-self: center;
+}
+
+.h3 {
+    position: absolute;
+    top: 3%;
+    margin: 0;
+    text-align: center;
+    width: 100%;
+    color: white;
+    font-family: DINPro, sans-serif;
+    font-weight: 400;
+    font-size: clamp(14px, 1.5vw, 20px);
+}

@@ -1,0 +1,66 @@
+@font-face {
+    font-family: "DINProMed";
+    src: url("../Fonts/DINPro-Medium.otf");
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "DINProLight";
+    src: url("../Fonts/DINPro-Light.otf");
+    font-style: normal;
+}
+
+.mainContent {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-template-rows: 1fr 3fr 1.5fr;
+    grid-gap: 30px;
+    grid-template-areas:
+        "image title"
+        "image body"
+        "image buttons";
+}
+
+.mainImage {
+    grid-area: image;
+    align-self: flex-start;
+    margin-top: 25px;
+    object-fit: cover;
+    width: 100%;
+    height:auto;
+}
+
+.title {
+    font-family: DINProMed, sans-serif;
+    margin: 0;
+    grid-area: title;
+    justify-self: flex-start;
+    align-self: center;
+}
+
+.info {
+    grid-area: body;
+}
+
+.p {
+    margin: 0;
+    font-family: DINProLight, sans-serif;
+    font-weight: 100;
+}
+
+.buttonBox1 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: center;
+}
+
+.buttonBox2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 30px;
+    justify-items: center;
+}
