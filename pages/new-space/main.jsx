@@ -1,5 +1,5 @@
 import styles from "../../styles/MainQuizPage.module.css";
-import CustomButton from "../../components/CustomButton";
+import NavButton from "../../components/NavButton";
 import Tooltip from "@material-ui/core/Tooltip";
 import { withStyles } from "@material-ui/core/styles";
 
@@ -28,19 +28,24 @@ const Main = () => {
             <h2 className={styles.title}>New Space</h2>
             <div className={styles.info}>
                 <p className={styles.p}>
-                    Since 2000, there has been a new wave of aerospace companies, mostly privately-funded, seeking to provide greater access to space and achieve different goals.
+                    Since 2000, there has been a new wave of aerospace companies, mostly privately-funded, seeking to
+                    provide greater access to space and achieve different goals.
                 </p>
                 <br />
                 <p className={styles.p}>
-                    Some companies like Astra, Firefly Aerospace, Relativity and Skyrora aim to offer low-cost access to space for smaller payloads. Blue Origin have grander ambitions with huge, heavy-lift rockets in development along with powerful, next-generation rocket engines. Sierra Nevada Corporation will fly a reusable cargo spaceplane to the ISS in 2022 on ULA's Vulcan rocket.
+                    Some companies like Astra, Firefly Aerospace, Relativity and Skyrora aim to offer low-cost access to
+                    space for smaller payloads. Blue Origin have grander ambitions with huge, heavy-lift rockets in
+                    development along with powerful, next-generation rocket engines. Sierra Nevada Corporation will fly
+                    a reusable cargo spaceplane to the ISS in 2022 on ULA's Vulcan rocket.
                 </p>
                 <br />
                 <p className={styles.p}>
-                   Several other small aerospace outfits operate around the world all with the goal of crossing the Kármán line and reaching the inky black night.
+                    Several other small aerospace outfits operate around the world all with the goal of crossing the
+                    Kármán line and reaching the inky black night.
                 </p>
             </div>
             <div className={styles.buttonBox1}>
-                <CustomButton text="Take Quiz" />
+                <NavButton text="Take Quiz" />
             </div>
         </div>
     );

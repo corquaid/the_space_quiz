@@ -1,6 +1,6 @@
 import styles from "../styles/Header.module.css";
 import Link from "next/link";
-import CustomButton from "./CustomButton";
+import NavButton from "./NavButton";
 
 const Header = () => {
     return (

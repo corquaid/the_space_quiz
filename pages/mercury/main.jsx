@@ -1,8 +1,7 @@
 import styles from "../../styles/MainQuizPage.module.css";
-import CustomButton from "../../components/CustomButton";
+import NavButton from "../../components/NavButton";
 import Tooltip from "@material-ui/core/Tooltip";
-import { withStyles } from '@material-ui/core/styles';
-
+import { withStyles } from "@material-ui/core/styles";
 
 const LightTooltip = withStyles(theme => ({
     tooltip: {
@@ -16,7 +15,10 @@ const LightTooltip = withStyles(theme => ({
 const Main = () => {
     return (
         <div className={styles.mainContent}>
-            <LightTooltip title="Alan Shepard sits pensively in his Mercury capsule prior to his historic flight in May 1961. Credit: NASA" placement="top-start">
+            <LightTooltip
+                title="Alan Shepard sits pensively in his Mercury capsule prior to his historic flight in May 1961. Credit: NASA"
+                placement="top-start"
+            >
                 <img
                     className={styles.mainImage}
                     src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Alan_Shepard_in_capsule_aboard_Freedom_7_before_launch.jpg"
@@ -41,7 +43,7 @@ const Main = () => {
                 </p>
             </div>
             <div className={styles.buttonBox1}>
-                <CustomButton text="Start Quiz" />
+                <NavButton text="Start Quiz" />
             </div>
         </div>
     );

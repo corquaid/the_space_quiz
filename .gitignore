@@ -15,6 +15,10 @@
 # production
 /build
 
+# JSON quiz data
+/quiz-data
+
+
 # misc
 .DS_Store
 *.pem

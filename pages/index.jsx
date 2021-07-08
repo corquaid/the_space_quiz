@@ -1,14 +1,11 @@
-import { useContext, useEffect } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import QuizCard from "../components/QuizCard";
 import styles from "../styles/Layout.module.css";
-import { HomeContext } from "../contexts/HomeContext";
 import { table, minifyRecords } from "./api/utils/airtable";
 
-export default function Home({ initialCategories }) {
-    const { quizCategories, setCategories } = useContext(HomeContext);
-
+export default function Home({ quizCategories }) {
+    console.log(process.env.DATABASE_URL)
     return (
         <div className={styles.gridContainer}>
             <Head>
@@ -24,7 +21,7 @@ export default function Home({ initialCategories }) {
                 />
             </Head>
 
-            {initialCategories.map(item => {
+            {quizCategories.map(item => {
                 const { id, title, slug, tooltip } = item.fields;
                 const url = item.fields.photo[0].url;
                 return (
@@ -48,7 +45,7 @@ export async function getServerSideProps() {
             .firstPage();
         return {
             props: {
-                initialCategories: minifyRecords(dataItems),
+                quizCategories: minifyRecords(dataItems),
             },
         };
     } catch (err) {

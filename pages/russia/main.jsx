@@ -1,5 +1,5 @@
 import styles from "../../styles/MainQuizPage.module.css";
-import CustomButton from "../../components/CustomButton";
+import NavButton from "../../components/NavButton";
 import Tooltip from "@material-ui/core/Tooltip";
 import { withStyles } from "@material-ui/core/styles";
 
@@ -43,11 +43,12 @@ const Main = () => {
                 </p>
                 <br />
                 <p className={styles.p}>
-                    Russia continues to operate extensive science and spaceflight programs with plans  for next-generation rockets such as Soyuz-5 and Angara, as well as lunar cooperation with China.
+                    Russia continues to operate extensive science and spaceflight programs with plans for
+                    next-generation rockets such as Soyuz-5 and Angara, as well as lunar cooperation with China.
                 </p>
             </div>
             <div className={styles.buttonBox1}>
-                <CustomButton text="Take Quiz" />
+                <NavButton text="Take Quiz" />
             </div>
         </div>
     );

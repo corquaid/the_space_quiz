@@ -1,5 +1,5 @@
 import styles from "../../styles/MainQuizPage.module.css";
-import CustomButton from "../../components/CustomButton";
+import NavButton from "../../components/NavButton";
 import Tooltip from "@material-ui/core/Tooltip";
 import { withStyles } from "@material-ui/core/styles";
 
@@ -33,16 +33,19 @@ const Main = () => {
                 </p>
                 <br />
                 <p className={styles.p}>
-                    Regular launches over several years and the use of some ground-breaking technologies has allowed Rocket Lab to
-                    establish a market-leading position for smallsat launch.
+                    Regular launches over several years and the use of some ground-breaking technologies has allowed
+                    Rocket Lab to establish a market-leading position for smallsat launch.
                 </p>
                 <br />
                 <p className={styles.p}>
-                    Well-known for their cool mission names, slick mission control and relatively open, engaging public presence, Rocket Lab are pursuing development of some serious capabilities such as booster reusability (like SpaceX), multiple launch sites and a brand-new medium-lift launch vehicle aiming to be ready in 2024.
+                    Well-known for their cool mission names, slick mission control and relatively open, engaging public
+                    presence, Rocket Lab are pursuing development of some serious capabilities such as booster
+                    reusability (like SpaceX), multiple launch sites and a brand-new medium-lift launch vehicle aiming
+                    to be ready in 2024.
                 </p>
             </div>
             <div className={styles.buttonBox1}>
-                <CustomButton text="Take Quiz" />
+                <NavButton text="Take Quiz" />
             </div>
         </div>
     );
