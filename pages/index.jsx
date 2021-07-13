@@ -2,7 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import QuizCard from "../components/QuizCard";
 import styles from "../styles/Layout.module.css";
-import { table, minifyRecords } from "./api/utils/airtable";
+import { table, minifyRecords } from "../utils/airtable";
 
 export default function Home({ quizCategories }) {
     console.log(process.env.DATABASE_URL)

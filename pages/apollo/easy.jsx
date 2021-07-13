@@ -1,9 +1,9 @@
-import { connectToDatabase } from "../api/utils/mongodb";
+import { connectToDatabase } from "../../utils/mongodb";
 import { useContext } from "react";
 import { QuizContext } from "../../contexts/QuizContext";
 
 
-export default function Easy({ quizData }) {
+const Easy = ({ quizData }) => {
     const { currentQuestion, setCurrentQuestion, showScore, setShowScore, score, setScore } = useContext(QuizContext);
         
     const handleAnswerOptionClick = isCorrect => {
@@ -45,6 +45,8 @@ export default function Easy({ quizData }) {
         </div>
     );
 }
+
+export default Easy;
 
 export async function getServerSideProps() {
     try {

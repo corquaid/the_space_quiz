@@ -32,3 +32,13 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## TODOs
+
+- [ ] Add dark/light mode toggle switch.
+- [ ] Look at in-screen video clips for each quiz category page
+- [ ] Add quiz question images to mongodb documents where needed
+- [ ] Add ScoreModal score range messages
+- [ ] Look again at next/images business
+- [ ] Add social sharing functionality on ScoreModal
+- [ ] Tidy up responsive design

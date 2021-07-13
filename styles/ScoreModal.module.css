@@ -1,0 +1,19 @@
+.content {
+    width: 400px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.iconContainer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.buttonBox {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 30px;
+    justify-items: center;
+}

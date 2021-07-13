@@ -1,4 +1,4 @@
-import { table, getMinifiedRecord, minifyRecords } from './utils/airtable';
+import { table, getMinifiedRecord, minifyRecords } from '../../utils/airtable';
 
 export default async (req, res) => {
     try {

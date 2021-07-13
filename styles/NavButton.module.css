@@ -1,19 +1,13 @@
-/* @font-face {
-    font-family: "DINPro";
-    src: url("../Fonts/DINPro-Medium.otf");
-    font-style: normal;
-} */
-
 @font-face {
     font-family: "Helvetica";
     src: url("../Fonts/HelveticaNeueCyr-Medium.ttf");
 }
 
 .button {
-    min-width: 120px;
+    min-width: 150px;
     width: fit-content;
     height: 50px;
-    background-color: #740000;
+    background-color: #1F2833;
     color: white;
     font-family: Helvetica, sans-serif;
     font-size: 16px;
@@ -21,6 +15,10 @@
     border: none;
     cursor: pointer;
     transition: 0.1s linear;
+}
+
+.button:hover {
+    background-color: #45A29E;
 }
 
 .button:active {
