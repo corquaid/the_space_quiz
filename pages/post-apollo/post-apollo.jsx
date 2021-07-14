@@ -1,24 +1,21 @@
 import QuizPanel from "../../components/QuizPanel";
 import { connectToDatabase } from "../../utils/mongodb";
 
-const Easy = ({ quizData }) => {
-    const imageUrl =
-        "https://cdn.theatlantic.com/media/img/photo/2019/07/apollo-11-moon-landing-photos-50-ye/a01_40-5903-1/original.jpg";
+const PostApollo = ({ quizData }) => {
+    const imageUrl = "https://upload.wikimedia.org/wikipedia/commons/2/2d/Astronaut_Donald_K._Slayton_and_cosmonaut_Aleksey_A._Leonov_in_the_Soyuz_Orbital_Module.jpg";
 
-        const tooltip = "The second human to walk on the Moon, with the first visible in his helmet visor. Credit: NASA";
-
-
+    const tooltip = "Deke Slayton and Alexei Leonov greet each other in space during the Apollo-Soyuz Test Program flight in July 1975. Credit: NASA";
     return <QuizPanel quizData={quizData} imageUrl={imageUrl} tooltip={tooltip} />;
 };
 
-export default Easy;
+export default PostApollo;
 
 // getserversideprops here
 export async function getServerSideProps() {
     try {
         const { db } = await connectToDatabase();
 
-        const data = await db.collection("apollo_easy").find({}).toArray();
+        const data = await db.collection("post_apollo").find({}).toArray();
 
         return {
             props: {

@@ -1,19 +1,61 @@
+@font-face {
+    font-family: "helvetica-bold";
+    src: url("../Fonts/HelveticaNeueCyr-Bold.woff");
+    font-style: normal;
+    font-weight: 100;
+}
+
 .content {
-    width: 400px;
-    height: 200px;
+    background-color: #D6DBD6;
+    width: 450px;
     display: flex;
     flex-direction: column;
+    align-items: center;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.title {
+    width: 90%;
+    text-align: center;
+    font-family: helvetica-bold, sans-serif;
+    font-size: 24px;
 }
 
 .iconContainer {
+    width: 10%;
     display: flex;
     justify-content: flex-end;
 }
 
+
 .buttonBox {
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+        "repeat repeat"
+        "home  category";
     grid-gap: 30px;
     justify-items: center;
+    margin: 20px 0;
+}
+
+.repeatButton {
+    grid-area: repeat;
+    
+}
+
+.homeButton {
+    grid-area: home;
+}
+
+.categoryButton {
+    grid-area: category;
 }

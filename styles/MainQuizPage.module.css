@@ -48,9 +48,11 @@
     margin: 0;
     font-family: DINProLight, sans-serif;
     font-weight: 100;
+    font-size: 16px;
 }
 
 .buttonBox1 {
+    grid-area: buttons;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -59,9 +61,13 @@
 }
 
 .buttonBox2 {
+    width: fit-content;
+    height: fit-content;
+    grid-area: buttons;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-gap: 30px;
-    justify-items: center;
+    grid-template-rows: fit-content;
+    grid-gap: 5px;
+    justify-self: center;
+    align-items: center;
 }

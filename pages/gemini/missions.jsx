@@ -3,9 +3,9 @@ import { connectToDatabase } from "../../utils/mongodb";
 
 const Missions = ({ quizData }) => {
     const imageUrl =
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Gumdrop_Meets_Spider_-_GPN-2000-001100.jpg/1024px-Gumdrop_Meets_Spider_-_GPN-2000-001100.jpg";
+        "https://www.nasa.gov/sites/default/files/thumbnails/image/9-s66-18602a.jpg";
 
-        const tooltip = "Astronaut Dave Scott stands in the open hatch of the Apollo 9 command module while in orbit in March 1969. Credit: NASA";
+        const tooltip = "Gemini 8 astronauts Dave Scott and Neil Armstrong sit in their Gemini spacecraft following an emergency splashdown. Credit: NASA";
     return (
         <QuizPanel quizData={quizData} imageUrl={imageUrl} tooltip={tooltip}/>
     )
@@ -18,7 +18,7 @@ export async function getServerSideProps() {
     try {
         const { db } = await connectToDatabase();
 
-        const data = await db.collection("apollo_missions").find({}).toArray();
+        const data = await db.collection("gemini_missions").find({}).toArray();
 
         return {
             props: {

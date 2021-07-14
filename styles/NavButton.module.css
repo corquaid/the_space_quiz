@@ -4,8 +4,9 @@
 }
 
 .button {
-    min-width: 150px;
-    width: fit-content;
+    width: 170px;
+    white-space: normal;
+    word-wrap: break-word;
     height: 50px;
     background-color: #1F2833;
     color: white;

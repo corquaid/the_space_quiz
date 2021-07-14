@@ -45,12 +45,12 @@ const Main = () => {
                     <NavButton text="Easy Quiz" />
                 </Link>
                 <Link href="/apollo/missions" passHref>
-                    <NavButton text="Missions Quiz" />
+                    <NavButton text="Missions & Machines Quiz" />
                 </Link>
                 <Link href="/apollo/people" passHref>
                     <NavButton text="People Quiz" />
                 </Link>
-                <Link href="/apollo/saturn" passHref>
+                <Link href="/apollo/saturn-v" passHref>
                     <NavButton text="Saturn V Quiz" />
                 </Link>
             </div>

@@ -1,24 +1,21 @@
 import QuizPanel from "../../components/QuizPanel";
 import { connectToDatabase } from "../../utils/mongodb";
 
-const Easy = ({ quizData }) => {
-    const imageUrl =
-        "https://cdn.theatlantic.com/media/img/photo/2019/07/apollo-11-moon-landing-photos-50-ye/a01_40-5903-1/original.jpg";
+const People = ({ quizData }) => {
+    const imageUrl = "https://upload.wikimedia.org/wikipedia/commons/c/c5/JSC2011-E205613.jpg";
 
-        const tooltip = "The second human to walk on the Moon, with the first visible in his helmet visor. Credit: NASA";
-
-
+    const tooltip = "The first and final crews of the Space Shuttle pictured together in November 2011, (l-r) Doug Hurley, Bob Crippen, John Young, Chris Ferguson, Sandy Magnus and Rex Walheim. Credit: NASA";
     return <QuizPanel quizData={quizData} imageUrl={imageUrl} tooltip={tooltip} />;
 };
 
-export default Easy;
+export default People;
 
 // getserversideprops here
 export async function getServerSideProps() {
     try {
         const { db } = await connectToDatabase();
 
-        const data = await db.collection("apollo_easy").find({}).toArray();
+        const data = await db.collection("shuttle_people").find({}).toArray();
 
         return {
             props: {

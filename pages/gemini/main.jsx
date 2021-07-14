@@ -1,4 +1,5 @@
 import styles from "../../styles/MainQuizPage.module.css";
+import Link from "next/link";
 import NavButton from "../../components/NavButton";
 import Tooltip from "@material-ui/core/Tooltip";
 import { withStyles } from "@material-ui/core/styles";
@@ -43,8 +44,12 @@ const Main = () => {
                 </p>
             </div>
             <div className={styles.buttonBox1}>
-                <NavButton text="Missions & Machines Quiz" />
-                <NavButton text="People Quiz" />
+                <Link href="/gemini/missions" passHref>
+                    <NavButton text="Missions & Machines Quiz" />
+                </Link>
+                <Link href="/gemini/people" passHref>
+                    <NavButton text="People Quiz" />
+                </Link>
             </div>
         </div>
     );
