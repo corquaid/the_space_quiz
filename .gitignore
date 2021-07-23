@@ -18,6 +18,9 @@
 # JSON quiz data
 /quiz-data
 
+# folder with images only - NOT USED
+/images
+
 
 # misc
 .DS_Store

@@ -1,16 +1,10 @@
-@font-face {
-    font-family: "helvetica-bold";
-    src: url("../Fonts/HelveticaNeueCyr-Bold.woff");
-    font-style: normal;
-    font-weight: 100;
-}
-
 .content {
     background-color: #D6DBD6;
     width: 450px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    align-self: center;
 }
 
 .header {
@@ -23,7 +17,7 @@
 .title {
     width: 90%;
     text-align: center;
-    font-family: helvetica-bold, sans-serif;
+    font-family: helveticabold, sans-serif;
     font-size: 24px;
 }
 
@@ -58,4 +52,20 @@
 
 .categoryButton {
     grid-area: category;
+}
+
+@media screen and (max-width: 600px) {
+    .content {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .buttonBox {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            "repeat"
+            "home"
+            "category";
+    }
 }

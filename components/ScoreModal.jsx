@@ -1,7 +1,5 @@
 import styles from "../styles/ScoreModal.module.css";
 import Dialog from "@material-ui/core/Dialog";
-import IconButton from "@material-ui/core/IconButton";
-import CloseIcon from "@material-ui/icons/Close";
 import NavButton from "./NavButton";
 import Link from "next/link";
 
@@ -28,7 +26,7 @@ const ScoreModal = ({ score, showScore, handleClose, categoryRaw, categoryFormat
             modalMessage = <h3>You're go for Trans-Lunar Injection! Nice job.</h3>;
             break;
         case 10:
-            modalMessage = <h3>That was a big step - you're on the Moon!</h3>;
+            modalMessage = <h3>That was a big step - you're standing on the Moon!</h3>;
             break;
         default:
             modalMessage = <h3>Oops. Something went wrong.</h3>;
@@ -38,11 +36,6 @@ const ScoreModal = ({ score, showScore, handleClose, categoryRaw, categoryFormat
             <div className={styles.content}>
                 <div className={styles.header}>
                     <h2 className={styles.title}>The Space Quiz</h2>
-                    <div className={styles.iconContainer}>
-                        <IconButton className={styles.closeIcon} onClick={handleClose}>
-                            <CloseIcon />
-                        </IconButton>
-                    </div>
                 </div>
                 {modalMessage}
                 <h3>You scored {score} out of 10.</h3>

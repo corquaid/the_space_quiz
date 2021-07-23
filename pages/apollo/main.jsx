@@ -2,6 +2,7 @@ import styles from "../../styles/MainQuizPage.module.css";
 import NavButton from "../../components/NavButton";
 import Tooltip from "@material-ui/core/Tooltip";
 import Link from "next/link";
+import Head from "next/head";
 import { withStyles } from "@material-ui/core/styles";
 
 const LightTooltip = withStyles(theme => ({
@@ -16,6 +17,10 @@ const LightTooltip = withStyles(theme => ({
 const Main = () => {
     return (
         <div className={styles.mainContent}>
+            <Head>
+                <title>Apollo | The Space Quiz</title>
+                <meta name="description" content="Think you know the Apollo Program? Try our Apollo quizzes." />
+            </Head>
             <LightTooltip
                 title="Launch of Apollo 4, the maiden launch of Saturn V, from Pad 39A of Kennedy Space Center in November 1967. Credit: NASA"
                 placement="top-start"
@@ -26,7 +31,7 @@ const Main = () => {
                     alt="Maiden launch of Saturn V rocket on Apollo 4"
                 />
             </LightTooltip>
-            <h2 className={styles.title}>Apollo</h2>
+            <h1 className={styles.title}>Apollo</h1>
             <div className={styles.info}>
                 <p className={styles.p}>
                     The Apollo lunar missions remain the peak of human space exploration and occupy a unique place in
@@ -37,10 +42,10 @@ const Main = () => {
                 <br />
                 <p className={styles.p}>
                     From the brave astronauts and tenacious mission control teams to the famous Saturn V rocket and
-                    Lunar Module, Apollo forever changed how humans look upon the Solar System.
+                    Lunar Module, Apollo forever changed how humans look upon the Solar System and space exploration.
                 </p>
             </div>
-            <div className={styles.buttonBox2}>
+            <div className={styles.buttonBox4}>
                 <Link href="/apollo/easy" passHref>
                     <NavButton text="Easy Quiz" />
                 </Link>

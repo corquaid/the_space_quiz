@@ -1,4 +1,6 @@
 import styles from "../../styles/MainQuizPage.module.css";
+import Link from "next/link";
+import Head from "next/head";
 import NavButton from "../../components/NavButton";
 import Tooltip from "@material-ui/core/Tooltip";
 import { withStyles } from "@material-ui/core/styles";
@@ -15,6 +17,10 @@ const LightTooltip = withStyles(theme => ({
 const Main = () => {
     return (
         <div className={styles.mainContent}>
+            <Head>
+                <title>Space Stations | The Space Quiz</title>
+                <meta name="description" content="Think you know about space stations? Try our Space Stations quiz." />
+            </Head>
             <LightTooltip
                 title="Astronaut Stephen Robinson pictured on the extended Canadarm-2 during a spacewalk from the International Space Station in July 2005. Credit: NASA"
                 placement="top-start"
@@ -25,7 +31,7 @@ const Main = () => {
                     alt="ISS spacewalk"
                 />
             </LightTooltip>
-            <h2 className={styles.title}>Space Stations</h2>
+            <h1 className={styles.title}>Space Stations</h1>
             <div className={styles.info}>
                 <p className={styles.p}>
                     From Salyut and Skylab to Mir, Tiangong and the ISS, over the past 50 years, space stations have
@@ -50,7 +56,9 @@ const Main = () => {
                 </p>
             </div>
             <div className={styles.buttonBox1}>
-                <NavButton text="Take Quiz" />
+                <Link href="/space-stations/stations" passHref>
+                    <NavButton text="Take Quiz" />
+                </Link>
             </div>
         </div>
     );

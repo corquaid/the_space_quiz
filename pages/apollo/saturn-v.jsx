@@ -1,3 +1,4 @@
+import Head from "next/head";
 import QuizPanel from "../../components/QuizPanel";
 import { connectToDatabase } from "../../utils/mongodb";
 
@@ -5,7 +6,15 @@ const Saturn = ({ quizData }) => {
     const imageUrl = "https://upload.wikimedia.org/wikipedia/commons/e/e2/Apollo_11_first_stage_separation.jpg";
 
     const tooltip = "First stage separation of the Apollo 11 Saturn V rocket in July 1969. Credit: NASA";
-    return <QuizPanel quizData={quizData} imageUrl={imageUrl} tooltip={tooltip} />;
+    return (
+        <>
+            <Head>
+                <title>Apollo | Saturn V | The Space Quiz</title>
+                <meta name="description" content="Quiz on the Saturn V rocket" />
+            </Head>
+            <QuizPanel quizData={quizData} imageUrl={imageUrl} tooltip={tooltip} />;
+        </>
+    );
 };
 
 export default Saturn;

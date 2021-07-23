@@ -1,15 +1,22 @@
+import Head from "next/head";
 import QuizPanel from "../../components/QuizPanel";
 import { connectToDatabase } from "../../utils/mongodb";
 
 const Missions = ({ quizData }) => {
-    const imageUrl =
-        "https://www.nasa.gov/sites/default/files/thumbnails/image/9-s66-18602a.jpg";
+    const imageUrl = "https://www.nasa.gov/sites/default/files/thumbnails/image/9-s66-18602a.jpg";
 
-        const tooltip = "Gemini 8 astronauts Dave Scott and Neil Armstrong sit in their Gemini spacecraft following an emergency splashdown. Credit: NASA";
+    const tooltip =
+        "Gemini 8 astronauts Dave Scott and Neil Armstrong sit in their Gemini spacecraft following an emergency splashdown in March 1966. Credit: NASA";
     return (
-        <QuizPanel quizData={quizData} imageUrl={imageUrl} tooltip={tooltip}/>
-    )
-}
+        <>
+            <Head>
+                <title>Gemini | Missions & Machines | The Space Quiz</title>
+                <meta name="description" content="Quiz on the Gemini Program Missions & Machines" />
+            </Head>
+            <QuizPanel quizData={quizData} imageUrl={imageUrl} tooltip={tooltip} />;
+        </>
+    );
+};
 
 export default Missions;
 

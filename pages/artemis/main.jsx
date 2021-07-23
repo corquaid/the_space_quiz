@@ -1,4 +1,6 @@
 import styles from "../../styles/MainQuizPage.module.css";
+import Link from "next/link";
+import Head from "next/head";
 import NavButton from "../../components/NavButton";
 import Tooltip from "@material-ui/core/Tooltip";
 import { withStyles } from "@material-ui/core/styles";
@@ -15,6 +17,10 @@ const LightTooltip = withStyles(theme => ({
 const Main = () => {
     return (
         <div className={styles.mainContent}>
+            <Head>
+                <title>Artemis | The Space Quiz</title>
+                <meta name="description" content="Think you know the Artemis Program? Try our Artemis quiz." />
+            </Head>
             <LightTooltip
                 title="Artists' impression of the Lunar Starship Human Landing System on the Moon in the 2020s. Credit: SpaceX"
                 placement="top-start"
@@ -25,7 +31,7 @@ const Main = () => {
                     alt="Starship on the Moon"
                 />
             </LightTooltip>
-            <h2 className={styles.title}>Artemis</h2>
+            <h1 className={styles.title}>Artemis</h1>
             <div className={styles.info}>
                 <p className={styles.p}>
                     The Artemis program, led by NASA with several international space agency partners, will deliver the
@@ -50,7 +56,9 @@ const Main = () => {
                 </p>
             </div>
             <div className={styles.buttonBox1}>
-                <NavButton text="Take Quiz" />
+                <Link href="/artemis/artemis" passHref>
+                    <NavButton text="Take Quiz" />
+                </Link>
             </div>
         </div>
     );

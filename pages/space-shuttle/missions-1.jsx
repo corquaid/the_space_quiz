@@ -1,3 +1,4 @@
+import Head from "next/head";
 import QuizPanel from "../../components/QuizPanel";
 import { connectToDatabase } from "../../utils/mongodb";
 
@@ -5,7 +6,15 @@ const Missions1 = ({ quizData }) => {
     const imageUrl = "https://www.nasa.gov/sites/default/files/thumbnails/image/iss022e062672.jpg";
 
     const tooltip = "The silhouette of Shuttle Endeavour is photographed from the ISS during STS-130 in February 2010. Credit: NASA";
-    return <QuizPanel quizData={quizData} imageUrl={imageUrl} tooltip={tooltip} />;
+    return (
+        <>
+            <Head>
+                <title>Space Shuttle | Missions 1 | The Space Quiz</title>
+                <meta name="description" content="Quiz on the Missions & Machines of the Space Shuttle Program" />
+            </Head>
+            <QuizPanel quizData={quizData} imageUrl={imageUrl} tooltip={tooltip} />;
+        </>
+    );
 };
 
 export default Missions1;

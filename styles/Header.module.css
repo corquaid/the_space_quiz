@@ -1,10 +1,3 @@
-@font-face {
-    font-family: "helvetica-bold";
-    src: url("../Fonts/HelveticaNeueCyr-Bold.woff");
-    font-style: normal;
-    font-weight: 100;
-}
-
 .headerContainer {
     width: 100%;
     display: flex;
@@ -17,7 +10,7 @@
     color: black;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     border-bottom: 1px solid black;
     box-shadow: 0 4px 2px -2px gray;
 }
@@ -35,14 +28,14 @@
 
 .title {
     font-size: 4.5rem;
-    font-family: helvetica-bold, sans-serif;
+    font-family: HelveticaBold, sans-serif;
 }
 
 .linksContainer {
-    width: 50%;
+    width: fit-content;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: flex-end;
     font-family: helvetica-bold, Arial, sans-serif;
     font-size: 1rem;
 }
@@ -59,18 +52,8 @@
     text-decoration-color: rgba(0, 0, 0, 1);
 }
 
-@media screen and (max-width: 1250px) {
+@media screen and (max-width: 1100px) {
     .title {
-        font-size: 4rem;
-    }
-}
-@media screen and (max-width: 1000px) {
-    .title {
-        font-size: 3rem;
-    }
-
-    .linksContainer {
-        /* justify-content: center; */
-        font-size: 1rem;
+        font-size: clamp(1.5rem, 5vw, 4rem);
     }
 }

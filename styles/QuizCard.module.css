@@ -17,7 +17,7 @@
 
 .cardImage {
     display: block;
-    object-fit:contain;
+    object-fit: contain;
     width: 100%;
     height: auto;
     justify-self: center;
@@ -32,5 +32,5 @@
     color: white;
     font-family: DINPro, sans-serif;
     font-weight: 400;
-    font-size: clamp(14px, 1.5vw, 20px);
+    font-size: clamp(16px, 1.5vw, 20px);
 }

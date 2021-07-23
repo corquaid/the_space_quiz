@@ -1,4 +1,6 @@
 import styles from "../../styles/MainQuizPage.module.css";
+import Link from "next/link";
+import Head from "next/head";
 import NavButton from "../../components/NavButton";
 import Tooltip from "@material-ui/core/Tooltip";
 import { withStyles } from "@material-ui/core/styles";
@@ -15,6 +17,13 @@ const LightTooltip = withStyles(theme => ({
 const Main = () => {
     return (
         <div className={styles.mainContent}>
+            <Head>
+                <title>Russia In Space | The Space Quiz</title>
+                <meta
+                    name="description"
+                    content="Think you know the Russian space program? Try our Russia In Space quiz."
+                />
+            </Head>
             <LightTooltip
                 title="Cosmonaut Valeri Polyakov pictured as Shuttle Discovery approaches the Mir space station in February 1995. Credit: NASA"
                 placement="top-start"
@@ -25,11 +34,11 @@ const Main = () => {
                     alt="Cosmonaut Valeri Polyakov on Mir in February 1995"
                 />
             </LightTooltip>
-            <h2 className={styles.title}>Russia In Space</h2>
+            <h1 className={styles.title}>Russia In Space</h1>
             <div className={styles.info}>
                 <p className={styles.p}>
                     The Soviet Union was the early front-runner in the Space Race of the 1950s and 1960s, achieving
-                    several firsts, notably Sputnik, the first man and first woman in space and the first spacewalk.
+                    several firsts, notably the first artificial satellite, Sputnik, the first man and first woman in space and the first spacewalk.
                 </p>
                 <br />
                 <p className={styles.p}>
@@ -38,8 +47,8 @@ const Main = () => {
                 </p>
                 <br />
                 <p className={styles.p}>
-                    In the 21st century, Russia is a joint founding partner of the ISS and transported all astronauts to
-                    the ISS between 2011 and 2020.
+                    In the 21st century, Russia is a founding partner of the ISS and transported all astronauts to the
+                    ISS between 2011 and 2020.
                 </p>
                 <br />
                 <p className={styles.p}>
@@ -48,7 +57,9 @@ const Main = () => {
                 </p>
             </div>
             <div className={styles.buttonBox1}>
-                <NavButton text="Take Quiz" />
+                <Link href="/russia/russia" passHref>
+                    <NavButton text="Take Quiz" />
+                </Link>
             </div>
         </div>
     );

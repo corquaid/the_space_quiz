@@ -11,6 +11,27 @@ export default class MyDocument extends Document {
           <meta name="theme-color" content={theme.palette.primary.main} />
           <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,500,700&display=swap" />
           <link
+            rel="preload"
+            href="/fonts/DINPro-Light.otf"
+            as="DINProLight"
+            type="font/otf"
+            crossOrigin="anonymous"
+          />
+          <link
+            rel="preload"
+            href="/fonts/DINPro-Medium.otf"
+            as="DINProMed"
+            type="font/otf"
+            crossOrigin="anonymous"
+          />
+          <link
+            rel="preload"
+            href="/fonts/HelveticaNeueCyr-Medium.ttf"
+            as="helvetica"
+            type="font/ttf"
+            crossOrigin="anonymous"
+          />
+          <link
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,500,700&display=swap"
           />

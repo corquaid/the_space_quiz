@@ -1,6 +1,6 @@
 import styles from "../styles/Header.module.css";
 import Link from "next/link";
-import NavButton from "./NavButton";
+import MUIDrawer from "./navbar/MUIDrawer";
 
 const Header = () => {
     return (
@@ -9,17 +9,9 @@ const Header = () => {
                 <div className={styles.title}>
                     <Link href="/">The Space Quiz</Link>
                 </div>
-                <div className={styles.linksContainer}>
-                    <Link href="/">
-                        <a className={styles.link}>Home</a>
-                    </Link>
-                    <Link href="/about">
-                        <a className={styles.link}>About</a>
-                    </Link>
-                    <Link href="/spacestuff">
-                        <a className={styles.link}>Space Stuff</a>
-                    </Link>
-                </div>
+                
+                <MUIDrawer />
+                
             </div>
         </div>
     );

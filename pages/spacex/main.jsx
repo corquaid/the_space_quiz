@@ -1,4 +1,6 @@
 import styles from "../../styles/MainQuizPage.module.css";
+import Link from "next/link";
+import Head from "next/head";
 import NavButton from "../../components/NavButton";
 import Tooltip from "@material-ui/core/Tooltip";
 import { withStyles } from "@material-ui/core/styles";
@@ -15,6 +17,10 @@ const LightTooltip = withStyles(theme => ({
 const Main = () => {
     return (
         <div className={styles.mainContent}>
+            <Head>
+                <title>SpaceX | The Space Quiz</title>
+                <meta name="description" content="Think you know about SpaceX? Try our SpaceX quizzes." />
+            </Head>
             <LightTooltip
                 title="Falcon 9 emerges through the fog layer after launch from Vandenberg Space Force Base on the Radarsat mission in June 2019. Credit: SpaceX"
                 placement="top-start"
@@ -25,7 +31,7 @@ const Main = () => {
                     alt="Falcon 9 launching June 2019"
                 />
             </LightTooltip>
-            <h2 className={styles.title}>SpaceX</h2>
+            <h1 className={styles.title}>SpaceX</h1>
             <div className={styles.info}>
                 <p className={styles.p}>
                     Founded in 2002, SpaceX has gone onto to become on the world's most innovative and exciting
@@ -43,10 +49,16 @@ const Main = () => {
                     in spaceflight and rocket technology in an industry that can seem stuffy and old-fashioned.
                 </p>
             </div>
-            <div className={styles.buttonBox2}>
-                <NavButton text="Easy Quiz" />
-                <NavButton text="Missions Quiz" />
-                <NavButton text="Machines Quiz" />
+            <div className={styles.buttonBox3}>
+                <Link href="/spacex/easy" passHref>
+                    <NavButton text="Easy Quiz" />
+                </Link>
+                <Link href="/spacex/missions" passHref>
+                    <NavButton text="Missions Quiz" />
+                </Link>
+                <Link href="/spacex/machines" passHref>
+                    <NavButton text="Machines Quiz" />
+                </Link>
             </div>
         </div>
     );

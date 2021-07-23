@@ -1,5 +1,6 @@
 import styles from "../../styles/MainQuizPage.module.css";
 import Link from "next/link";
+import Head from "next/head";
 import NavButton from "../../components/NavButton";
 import Tooltip from "@material-ui/core/Tooltip";
 import { withStyles } from "@material-ui/core/styles";
@@ -16,6 +17,10 @@ const LightTooltip = withStyles(theme => ({
 const Main = () => {
     return (
         <div className={styles.mainContent}>
+            <Head>
+                <title>Mercury | The Space Quiz</title>
+                <meta name="description" content="Think you know the Mercury Program? Try our Mercury quiz." />
+            </Head>
             <LightTooltip
                 title="Alan Shepard sits pensively in his Mercury capsule prior to his historic flight in May 1961. Credit: NASA"
                 placement="top-start"
@@ -26,7 +31,7 @@ const Main = () => {
                     alt="Alan Shepard in his Mercury capsule before his historic flight"
                 />
             </LightTooltip>
-            <h2 className={styles.title}>Mercury</h2>
+            <h1 className={styles.title}>Mercury</h1>
             <div className={styles.info}>
                 <p className={styles.p}>
                     Project Mercury was America's first human spaceflight program, created with the goal of putting the

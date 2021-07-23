@@ -1,5 +1,6 @@
 import styles from "../../styles/MainQuizPage.module.css";
 import Link from "next/link";
+import Head from "next/head";
 import NavButton from "../../components/NavButton";
 import Tooltip from "@material-ui/core/Tooltip";
 import { withStyles } from "@material-ui/core/styles";
@@ -16,6 +17,13 @@ const LightTooltip = withStyles(theme => ({
 const Main = () => {
     return (
         <div className={styles.mainContent}>
+            <Head>
+                <title>Post-Apollo | The Space Quiz</title>
+                <meta
+                    name="description"
+                    content="Think you know about the Post-Apollo years of NASA? Try our Post-Apollo quiz."
+                />
+            </Head>
             <LightTooltip
                 title="NASA's first space station, Skylab, pictured in orbit in 1973. Credit: NASA"
                 placement="top-start"
@@ -26,7 +34,7 @@ const Main = () => {
                     alt="Skylab in orbit"
                 />
             </LightTooltip>
-            <h2 className={styles.title}>Post-Apollo</h2>
+            <h1 className={styles.title}>Post-Apollo</h1>
             <div className={styles.info}>
                 <p className={styles.p}>
                     In the years following the final Apollo Moon landings, NASA pursued some worthwhile projects, namely
@@ -41,7 +49,7 @@ const Main = () => {
                 </p>
                 <br />
                 <p className={styles.p}>
-                    And of course, during the 1970s, NASA bgan development on their new reusable space shuttle.
+                    And of course, during the 1970s, NASA began development on their new reusable space shuttle.
                 </p>
             </div>
             <div className={styles.buttonBox1}>

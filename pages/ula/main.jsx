@@ -1,4 +1,6 @@
 import styles from "../../styles/MainQuizPage.module.css";
+import Link from "next/link";
+import Head from "next/head";
 import NavButton from "../../components/NavButton";
 import Tooltip from "@material-ui/core/Tooltip";
 import { withStyles } from "@material-ui/core/styles";
@@ -15,6 +17,10 @@ const LightTooltip = withStyles(theme => ({
 const Main = () => {
     return (
         <div className={styles.mainContent}>
+            <Head>
+                <title>ULA | The Space Quiz</title>
+                <meta name="description" content="Think you know about United Launch Alliance? Try our ULA quiz." />
+            </Head>
             <LightTooltip
                 title="The giant Delta IV Heavy rocket carrying NASA's Parker Solar Probe lifts off in August 2018. Credit: NASA"
                 placement="top-start"
@@ -25,7 +31,7 @@ const Main = () => {
                     alt="Delta 4 Heavy launch"
                 />
             </LightTooltip>
-            <h2 className={styles.title}>United Launch Alliance</h2>
+            <h1 className={styles.title}>United Launch Alliance</h1>
             <div className={styles.info}>
                 <p className={styles.p}>
                     ULA was formed in 2006 and brought the Atlas and Delta rocket families under the same roof,
@@ -45,7 +51,9 @@ const Main = () => {
                 </p>
             </div>
             <div className={styles.buttonBox1}>
-                <NavButton text="Take Quiz" />
+                <Link href="/ula/united-launch-alliance" passHref>
+                    <NavButton text="Take Quiz" />
+                </Link>
             </div>
         </div>
     );

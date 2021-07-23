@@ -38,7 +38,10 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 - [ ] Add dark/light mode toggle switch.
 - [ ] Look at in-screen video clips for each quiz category page
 - [ ] Add quiz question images to mongodb documents where needed
-- [ ] Add ScoreModal score range messages
+- [X] Add ScoreModal score range messages
 - [ ] Look again at next/images business
 - [ ] Add social sharing functionality on ScoreModal
-- [ ] Tidy up responsive design
+- [X] Tidy up responsive design
+- [ ] Add "Go Back" button and required logic to QuizPanel component
+- [ ] Move HomePage hosted data from airtable to mongodb
+

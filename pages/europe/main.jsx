@@ -1,4 +1,6 @@
 import styles from "../../styles/MainQuizPage.module.css";
+import Link from "next/link";
+import Head from "next/head";
 import NavButton from "../../components/NavButton";
 import Tooltip from "@material-ui/core/Tooltip";
 import { withStyles } from "@material-ui/core/styles";
@@ -15,6 +17,10 @@ const LightTooltip = withStyles(theme => ({
 const Main = () => {
     return (
         <div className={styles.mainContent}>
+            <Head>
+                <title>Europe In Space | The Space Quiz</title>
+                <meta name="description" content="Think you know about Europe's space program? Try our Europe In Space quiz." />
+            </Head>
             <LightTooltip
                 title="Comet 67P/Churyumov-Gerasimenko photographed in March 2015 by the Rosetta spacecraft of the European Space Agency. Credit: ESA"
                 placement="top-start"
@@ -25,7 +31,7 @@ const Main = () => {
                     alt="Comet 67P/Churyumov-Gerasimenko"
                 />
             </LightTooltip>
-            <h2 className={styles.title}>Europe In Space</h2>
+            <h1 className={styles.title}>Europe In Space</h1>
             <div className={styles.info}>
                 <p className={styles.p}>
                     Europe has a long and varied history in space, going back to the Diamant and Europa rockets, the
@@ -45,7 +51,9 @@ const Main = () => {
                 </p>
             </div>
             <div className={styles.buttonBox1}>
-                <NavButton text="Take Quiz" />
+                <Link href="/europe/europe" passHref>
+                    <NavButton text="Take Quiz" />
+                </Link>
             </div>
         </div>
     );

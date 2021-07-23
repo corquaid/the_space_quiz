@@ -1,0 +1,115 @@
+.main {
+    padding: 2rem 0;
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container p {
+    font-family: DINProLight, sans-serif;
+    font-size: 16px;
+}
+
+.container a {
+    color: #1da1f2;
+    font-weight: bolder;
+}
+
+.info {
+    width: 80%;
+}
+
+.info h1 {
+    font-family: DINProMed;
+    font-size: 24px;
+}
+
+.form {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputGroup {
+    height: 50%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+    font-family: DINProMed, sans-serif;
+    font-size: 16px;
+}
+
+.inputLabel {
+    text-align: left;
+}
+
+.inputField {
+    height: 30px;
+    width: 100%;
+    margin-top: 0.5rem;
+    font-family: DINProLight, sans-serif;
+    font-size: 16px;
+}
+
+.inputMessage {
+    height: 150px;
+    margin-top: 0.5rem;
+    font-family: DINProLight, sans-serif;
+    font-size: 16px;
+    word-wrap: normal;
+    overflow-wrap: break-word;
+    resize: none;
+    margin-bottom: 2rem;
+}
+
+.button {
+    width: 150px;
+    align-self: center;
+    white-space: normal;
+    word-wrap: break-word;
+    height: 50px;
+    background-color: #1f2833;
+    color: white;
+    font-family: Helvetica, sans-serif;
+    font-size: 16px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    transition: 0.1s linear;
+}
+
+.button:hover {
+    background-color: #45a29e;
+}
+
+.button:active {
+    transform: scale(0.95);
+}
+
+@media screen and (max-width: 1000px) {
+    .form {
+        width: 100%;
+    }
+
+    .info {
+        width: 90%;
+    }
+
+    .inputGroup {
+        width: 90%;
+    }
+}

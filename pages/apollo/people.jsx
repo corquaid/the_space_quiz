@@ -1,3 +1,4 @@
+import Head from "next/head";
 import QuizPanel from "../../components/QuizPanel";
 import { connectToDatabase } from "../../utils/mongodb";
 
@@ -5,7 +6,15 @@ const People = ({ quizData }) => {
     const imageUrl = "https://upload.wikimedia.org/wikipedia/commons/b/bb/Astronaut_Group_2_-_S62-6759.jpg";
 
     const tooltip = "Official group portrait of the NASA Group 2 astronauts in September 1962. Credit: NASA";
-    return <QuizPanel quizData={quizData} imageUrl={imageUrl} tooltip={tooltip} />;
+    return (
+        <>
+            <Head>
+                <title>Apollo | People | The Space Quiz</title>
+                <meta name="description" content="Quiz on the people of the Apollo Program" />
+            </Head>
+            <QuizPanel quizData={quizData} imageUrl={imageUrl} tooltip={tooltip} />;
+        </>
+    );
 };
 
 export default People;

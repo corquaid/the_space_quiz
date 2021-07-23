@@ -1,6 +1,5 @@
-const withImages = require("next-images");
 module.exports = {
     images: {
-        domains: ["upload.wikimedia.org"],
+        domains: ["dl.airtable.com"],
     },
 };

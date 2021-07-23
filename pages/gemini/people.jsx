@@ -1,11 +1,21 @@
+import Head from "next/head";
 import QuizPanel from "../../components/QuizPanel";
 import { connectToDatabase } from "../../utils/mongodb";
 
 const People = ({ quizData }) => {
     const imageUrl = "http://www.americaspace.com/wp-content/uploads/2013/11/gemini-xii-crews.jpg";
 
-    const tooltip = "The prime and backup crews for Gemini 12, (l-r) Buzz Aldrin, Gene Cernan, Jim Lovell, Gordo Cooper";
-    return <QuizPanel quizData={quizData} imageUrl={imageUrl} tooltip={tooltip} />;
+    const tooltip =
+        "The prime and backup crews for Gemini 12, (l-r) Buzz Aldrin, Gene Cernan, Jim Lovell and Gordo Cooper. Credit: NASA";
+    return (
+        <>
+            <Head>
+                <title>Gemini | People | The Space Quiz</title>
+                <meta name="description" content="Quiz on the people of the Gemini Program" />
+            </Head>
+            <QuizPanel quizData={quizData} imageUrl={imageUrl} tooltip={tooltip} />;
+        </>
+    );
 };
 
 export default People;

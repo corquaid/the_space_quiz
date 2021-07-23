@@ -1,7 +1,22 @@
-/* @font-face {
+@font-face {
     font-family: "DINProLight";
     src: url("../Fonts/DINPro-Light.otf");
-} */
+}
+
+@font-face {
+    font-family: "DINProMed";
+    src: url("../Fonts/DINPro-Medium.otf");
+}
+
+@font-face {
+    font-family: "Helvetica";
+    src: url("../Fonts/HelveticaNeueCyr-Medium.ttf");
+}
+
+@font-face {
+    font-family: "HelveticaBold";
+    src: url("../Fonts/HelveticaNeueCyr-Bold.woff");
+}
 
 html,
 body {
@@ -11,6 +26,7 @@ body {
     /* overflow: hidden; */
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
         Helvetica Neue, sans-serif;
+    
 
 }
 

@@ -1,4 +1,6 @@
 import styles from "../../styles/MainQuizPage.module.css";
+import Link from "next/link";
+import Head from "next/head";
 import NavButton from "../../components/NavButton";
 import Tooltip from "@material-ui/core/Tooltip";
 import { withStyles } from "@material-ui/core/styles";
@@ -15,6 +17,13 @@ const LightTooltip = withStyles(theme => ({
 const Main = () => {
     return (
         <div className={styles.mainContent}>
+            <Head>
+                <title>Rocket Lab | The Space Quiz</title>
+                <meta
+                    name="description"
+                    content="Think you know Rocket Lab? Try our Rocket Lab quiz."
+                />
+            </Head>
             <LightTooltip
                 title="Rocket Lab's Electron rocket rises from the launch pad in October 2019. Credit: Rocket Lab"
                 placement="top-start"
@@ -25,7 +34,7 @@ const Main = () => {
                     alt="Rocket Lab Electron launch"
                 />
             </LightTooltip>
-            <h2 className={styles.title}>Rocket Lab</h2>
+            <h1 className={styles.title}>Rocket Lab</h1>
             <div className={styles.info}>
                 <p className={styles.p}>
                     Rocket Lab was founded in 2006 as a small space startup with a focus on the smallsat launch market
@@ -45,7 +54,9 @@ const Main = () => {
                 </p>
             </div>
             <div className={styles.buttonBox1}>
-                <NavButton text="Take Quiz" />
+                <Link href="/rocket-lab/rocketlab" passHref>
+                    <NavButton text="Take Quiz" />
+                </Link>
             </div>
         </div>
     );

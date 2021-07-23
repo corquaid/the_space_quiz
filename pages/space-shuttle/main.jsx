@@ -1,5 +1,6 @@
 import styles from "../../styles/MainQuizPage.module.css";
 import Link from "next/link";
+import Head from "next/head";
 import NavButton from "../../components/NavButton";
 import Tooltip from "@material-ui/core/Tooltip";
 import { withStyles } from "@material-ui/core/styles";
@@ -16,6 +17,10 @@ const LightTooltip = withStyles(theme => ({
 const Main = () => {
     return (
         <div className={styles.mainContent}>
+            <Head>
+                <title>Space Shuttle | The Space Quiz</title>
+                <meta name="description" content="Think you know the Space Shuttle? Try our Space Shuttle quizzes." />
+            </Head>
             <LightTooltip
                 title="The maiden launch of Space Shuttle Atlantis (OV-104) on mission STS-51-J, in October 1985. Credit: NASA"
                 placement="top-start"
@@ -26,7 +31,7 @@ const Main = () => {
                     alt="Maiden launch of Space Shuttle Atlantis"
                 />
             </LightTooltip>
-            <h2 className={styles.title}>Space Shuttle</h2>
+            <h1 className={styles.title}>Space Shuttle</h1>
             <div className={styles.info}>
                 <p className={styles.p}>
                     Arguably the most famous family of spacecraft ever, the Space Shuttle fleet flew for over 30 years,
@@ -36,17 +41,17 @@ const Main = () => {
                 <p className={styles.p}>
                     From its first flight when it launched like a rocket and landed like an airplane, the Shuttle was
                     instantly recognisable and went on to become a highly successful vehicle, despite two tragic
-                    accidents and enormous costs.
+                    disasters and enormous costs.
                 </p>
                 <br />
                 <p className={styles.p}>
                     The Space Shuttle's main legacy is two-fold: visible in the night sky as the International Space
                     Station, which would not exist without the Shuttle fleet and its unique lifting and spacewalking
-                    capabilites; and also in the images and science from the Hubble Space Telescope which was launched
-                    and visited on five servicing missions by the Shuttle.
+                    capabilities; and also in thestunning images and science from the Hubble Space Telescope which was launched
+                    and visited on five servicing missions by the Shuttle fleet.
                 </p>
             </div>
-            <div className={styles.buttonBox2}>
+            <div className={styles.buttonBox4}>
                 <Link href="/space-shuttle/easy" passHref>
                     <NavButton text="Easy Quiz" />
                 </Link>

@@ -1,15 +1,3 @@
-@font-face {
-    font-family: "DINProMed";
-    src: url("../Fonts/DINPro-Medium.otf");
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "DINProLight";
-    src: url("../Fonts/DINPro-Light.otf");
-    font-style: normal;
-}
-
 .mainContent {
     width: 100%;
     display: grid;
@@ -25,10 +13,8 @@
 .mainImage {
     grid-area: image;
     align-self: flex-start;
-    /* margin-top: 25px; */
-    object-fit: cover;
+    object-fit: contain;
     width: 100%;
-    height: auto;
 }
 
 .title {
@@ -41,7 +27,6 @@
 
 .info {
     grid-area: body;
-    /* align-self: center; */
 }
 
 .p {
@@ -70,4 +55,67 @@
     grid-gap: 5px;
     justify-self: center;
     align-items: center;
+}
+
+.buttonBox3 {
+    width: fit-content;
+    height: fit-content;
+    grid-area: buttons;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: fit-content;
+    grid-template-areas:
+        "button1 button2"
+        "button3 button3";
+    grid-gap: 5px;
+    justify-self: center;
+    align-items: center;
+}
+
+.buttonBox3 :last-child {
+    grid-area: button3;
+    justify-self: center;
+}
+
+.buttonBox4 {
+    width: fit-content;
+    height: fit-content;
+    grid-area: buttons;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: fit-content;
+    grid-gap: 5px;
+    justify-self: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 950px) {
+    .mainContent {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-gap: 30px;
+        grid-template-areas:
+            "image"
+            "title"
+            "body"
+            "buttons";
+    }
+
+    .mainImage {
+        height: 500px;
+        overflow: hidden;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .mainImage {
+        justify-self: center;
+        height: 100%;
+        width: 90%;
+        object-fit: contain;
+        overflow: hidden;
+    }
+    .buttonBox2 {
+        grid-template-columns: 1fr;
+    }
 }

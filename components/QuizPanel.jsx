@@ -1,15 +1,20 @@
 import styles from "../styles/QuizPanel.module.css";
 import AnswerButton from "./AnswerButton";
-import ScoreModal from "./ScoreModal";
 import { useContext } from "react";
 import { QuizContext } from "../contexts/QuizContext";
 import { useRouter } from "next/router";
+import dynamic from "next/dynamic";
 import Tooltip from "@material-ui/core/Tooltip";
 import { withStyles } from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import Breadcrumbs from "@material-ui/core/Breadcrumbs";
 import Link from "@material-ui/core/Link";
 import LinearProgress from "@material-ui/core/LinearProgress";
+
+const DynamicScoreModal = dynamic(() => import("../components/ScoreModal"), {
+    loading: () => <p>Loading...</p>,
+});
 
 const LightTooltip = withStyles(theme => ({
     tooltip: {
@@ -20,29 +25,24 @@ const LightTooltip = withStyles(theme => ({
     },
 }))(Tooltip);
 
-const StyledBreadcrumbs = withStyles({
+const useStyles = makeStyles(theme => ({
     root: {
-        fontFamily: "helvetica-bold, sans-serif",
+        fontFamily: "helveticabold, sans-serif",
         color: "black",
-        // border: "1px solid black"
+        [theme.breakpoints.down("xs")]: {
+            fontSize: "12px",
+        },
     },
-})(Breadcrumbs);
-
-const StyledTypography = withStyles({
-    root: {
-        fontFamily: "helvetica-bold, sans-serif",
-        color: "black",
-    },
-})(Typography);
+}));
 
 const StyledLinearProgress = withStyles({
     colorPrimary: {
-        backgroundColor: "#7FD9B0"
-      },
-      barColorPrimary: {
-        backgroundColor: "#1F2833"
-      }
-})(LinearProgress)
+        backgroundColor: "#7FD9B0",
+    },
+    barColorPrimary: {
+        backgroundColor: "#1F2833",
+    },
+})(LinearProgress);
 
 const QuizPanel = ({ quizData, imageUrl, tooltip }) => {
     // Call in context for quiz score & logic tracking
@@ -52,13 +52,23 @@ const QuizPanel = ({ quizData, imageUrl, tooltip }) => {
     const router = useRouter();
     const fullPath = router.pathname;
 
+    // Formatting of category and quiz names for Link redirection and Breadcrumbs display
     const categoryRaw = fullPath.split("/")[1].charAt(0).toUpperCase() + fullPath.split("/")[1].substring(1);
 
-    const categoryFormatted = categoryRaw.replace(/(^|\/|-)(\S)/g, s => s.toUpperCase()).replace(/-/g, " ");
+    const categoryFormatted = categoryRaw
+        .replace(/(^|\/|-)(\S)/g, s => s.toUpperCase())
+        .replace(/-/g, " ")
+        .replace(/x$/, "X")
+        .replace(/ula/i, "ULA");
 
     const quizNameRaw = fullPath.split("/")[2].charAt(0).toUpperCase() + fullPath.split("/")[2].substring(1);
 
-    const quizNameFormatted = quizNameRaw.replace(/(^|\/|-)(\S)/g, s => s.toUpperCase()).replace(/-/g, " ");
+    const quizNameFormatted = quizNameRaw
+        .replace(/(^|\/|-)(\S)/g, s => s.toUpperCase())
+        .replace(/-/g, " ")
+        .replace(/stations/i, "Space Stations")
+        .replace(/newspace/i, "New Space")
+        .replace(/rocketlab/i, "Rocket Lab");
 
     // Sequential logic for progression through quiz
     const handleAnswerOptionClick = isCorrect => {
@@ -74,25 +84,40 @@ const QuizPanel = ({ quizData, imageUrl, tooltip }) => {
         }
     };
 
+    const handleBackClick = () => {
+        setCurrentQuestion(currentQuestion - 1);
+    };
+
     // Handler function for popup dialog close
     const handleClose = () => {
         setShowScore(false);
     };
 
+    const classes = useStyles();
+
     return (
         <div className={styles.container}>
-            <ScoreModal score={score} showScore={showScore} handleClose={handleClose} categoryRaw={categoryRaw} categoryFormatted={categoryFormatted} quizNameRaw={quizNameRaw} />
-            <StyledBreadcrumbs aria-label="breadcrumb" separator="›">
+            <DynamicScoreModal
+                score={score}
+                showScore={showScore}
+                handleClose={handleClose}
+                categoryRaw={categoryRaw}
+                categoryFormatted={categoryFormatted}
+                quizNameRaw={quizNameRaw}
+            />
+            <Breadcrumbs className={classes.root} aria-label="breadcrumb" separator="›">
                 <Link href="/" color="inherit">
                     Home
                 </Link>
                 <Link href={`/${categoryRaw.toLowerCase()}/main`} color="inherit">
                     {categoryFormatted}
                 </Link>
-                <StyledTypography color="inherit">{quizNameFormatted}</StyledTypography>
-            </StyledBreadcrumbs>
+                <Typography className={classes.root} color="inherit">
+                    {quizNameFormatted}
+                </Typography>
+            </Breadcrumbs>
             <div className={styles.quizBox}>
-            <StyledLinearProgress variant="determinate" value={currentQuestion * 10}/>
+                <StyledLinearProgress variant="determinate" value={currentQuestion * 10} />
                 <div className={styles.imageBox}>
                     <LightTooltip title={tooltip} placement="top-end">
                         <img className={styles.image} src={imageUrl} />
