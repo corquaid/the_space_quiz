@@ -14,7 +14,7 @@ const PostApollo = ({ quizData }) => {
                 <title>Post-Apollo | The Space Quiz</title>
                 <meta name="description" content="Quiz on the Post-Apollo years of NASA" />
             </Head>
-            <QuizPanel quizData={quizData} imageUrl={imageUrl} tooltip={tooltip} />;
+            <QuizPanel quizData={quizData} imageUrl={imageUrl} tooltip={tooltip} />
         </>
     );
 };

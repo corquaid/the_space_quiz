@@ -12,7 +12,7 @@ const Saturn = ({ quizData }) => {
                 <title>Apollo | Saturn V | The Space Quiz</title>
                 <meta name="description" content="Quiz on the Saturn V rocket" />
             </Head>
-            <QuizPanel quizData={quizData} imageUrl={imageUrl} tooltip={tooltip} />;
+            <QuizPanel quizData={quizData} imageUrl={imageUrl} tooltip={tooltip} />
         </>
     );
 };

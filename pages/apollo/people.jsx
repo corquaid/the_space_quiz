@@ -12,7 +12,7 @@ const People = ({ quizData }) => {
                 <title>Apollo | People | The Space Quiz</title>
                 <meta name="description" content="Quiz on the people of the Apollo Program" />
             </Head>
-            <QuizPanel quizData={quizData} imageUrl={imageUrl} tooltip={tooltip} />;
+            <QuizPanel quizData={quizData} imageUrl={imageUrl} tooltip={tooltip} />
         </>
     );
 };

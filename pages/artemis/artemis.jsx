@@ -14,7 +14,7 @@ const Artemis = ({ quizData }) => {
                 <title>Artemis | The Space Quiz</title>
                 <meta name="description" content="Quiz on NASA's Artemis Program" />
             </Head>
-            <QuizPanel quizData={quizData} imageUrl={imageUrl} tooltip={tooltip} />;
+            <QuizPanel quizData={quizData} imageUrl={imageUrl} tooltip={tooltip} />
         </>
     );
 };

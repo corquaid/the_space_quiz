@@ -1,9 +1,3 @@
-@font-face {
-    font-family: "DINPro";
-    src: url("../Fonts/DINPro-Medium.otf");
-    font-style: normal;
-}
-
 .cardBody {
     position: relative;
     height: 100%;

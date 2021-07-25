@@ -13,7 +13,7 @@ const NewSpace = ({ quizData }) => {
                 <title>New Space | The Space Quiz</title>
                 <meta name="description" content="Quiz on the New Space race of the 21st century." />
             </Head>
-            <QuizPanel quizData={quizData} imageUrl={imageUrl} tooltip={tooltip} />;
+            <QuizPanel quizData={quizData} imageUrl={imageUrl} tooltip={tooltip} />
         </>
     );
 };

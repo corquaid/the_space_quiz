@@ -13,7 +13,7 @@ const QuizProvider = ({ children }) => {
         showScore,
         setShowScore,
         score,
-        setScore
+        setScore,
     };
 
     return <QuizContext.Provider value={contextProps}>{children}</QuizContext.Provider>;

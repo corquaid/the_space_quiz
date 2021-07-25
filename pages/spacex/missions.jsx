@@ -13,7 +13,7 @@ const Missions = ({ quizData }) => {
                 <title>SpaceX | Missions | The Space Quiz</title>
                 <meta name="description" content="Quiz on the mission history of SpaceX" />
             </Head>
-            <QuizPanel quizData={quizData} imageUrl={imageUrl} tooltip={tooltip} />;
+            <QuizPanel quizData={quizData} imageUrl={imageUrl} tooltip={tooltip} />
         </>
     );
 };

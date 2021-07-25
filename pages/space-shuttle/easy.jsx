@@ -13,7 +13,7 @@ const Easy = ({ quizData }) => {
                 <title>Space Shuttle | Easy | The Space Quiz</title>
                 <meta name="description" content="Easy Quiz on the Space Shuttle" />
             </Head>
-            <QuizPanel quizData={quizData} imageUrl={imageUrl} tooltip={tooltip} />;
+            <QuizPanel quizData={quizData} imageUrl={imageUrl} tooltip={tooltip} />
         </>
     );
 };

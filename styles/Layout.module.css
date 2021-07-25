@@ -2,8 +2,6 @@
     display: grid;
     grid-template-columns: 1fr min-content 1fr;
     grid-template-rows: 1fr;
-    /* justify-items: stretch;
-    align-items: stretch; */
 }
 
 .contentContainer {
@@ -44,10 +42,13 @@
 
 .textBody h1 {
     font-family: DINProMed, sans-serif;
+    margin: 0;
 }
 
 .textBody p {
     margin: 0;
+    text-align: justify;
+    text-justify: inter-cluster;
 }
 
 .textBody a {
@@ -59,7 +60,6 @@
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    /* grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr)); */
     grid-gap: 15px;
 }
 

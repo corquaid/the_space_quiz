@@ -13,7 +13,7 @@ const RoboticExplorers = ({ quizData }) => {
                 <title>Robotic Explorers | The Space Quiz</title>
                 <meta name="description" content="Quiz on the history of robotic space exploration." />
             </Head>
-            <QuizPanel quizData={quizData} imageUrl={imageUrl} tooltip={tooltip} />;
+            <QuizPanel quizData={quizData} imageUrl={imageUrl} tooltip={tooltip} />
         </>
     );
 };

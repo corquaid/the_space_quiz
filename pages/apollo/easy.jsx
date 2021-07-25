@@ -6,7 +6,8 @@ const Easy = ({ quizData }) => {
     const imageUrl =
         "https://cdn.theatlantic.com/media/img/photo/2019/07/apollo-11-moon-landing-photos-50-ye/a01_40-5903-1/original.jpg";
 
-    const tooltip = "The second human to walk on the Moon, with the first visible in his helmet visor, during Apollo 11. Credit: NASA";
+    const tooltip =
+        "The second human to walk on the Moon, with the first visible in his helmet visor, during Apollo 11. Credit: NASA";
 
     return (
         <>
@@ -14,7 +15,7 @@ const Easy = ({ quizData }) => {
                 <title>Apollo | Easy | The Space Quiz</title>
                 <meta name="description" content="Easy Quiz on the Apollo Program" />
             </Head>
-            <QuizPanel quizData={quizData} imageUrl={imageUrl} tooltip={tooltip} />;
+            <QuizPanel quizData={quizData} imageUrl={imageUrl} tooltip={tooltip} />
         </>
     );
 };

@@ -1,5 +1,4 @@
 .main {
-    padding: 2rem 0;
     width: 100%;
     flex: 1;
     display: flex;
@@ -28,11 +27,14 @@
 
 .info {
     width: 80%;
+    text-align: justify;
+    text-justify: inter-cluster;
 }
 
 .info h1 {
     font-family: DINProMed;
-    font-size: 24px;
+    font-size: 32px;
+    margin-bottom: 0;
 }
 
 .form {

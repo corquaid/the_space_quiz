@@ -9,17 +9,13 @@
     background-color: white;
     color: black;
     font-family: DINProMed, sans-serif;
-    font-size: clamp(11px, 2.5vw, 18px);
+    font-size: clamp(12px, 2.5vw, 18px);
     border-radius: 15px;
     border: 2px solid black;
     cursor: pointer;
     transition: cubic-bezier(0, .88, 0, 1);
     overflow: hidden;
 }
-
-/* .button:hover {
-    border: 4px solid black;
-} */
 
 .button:active {
     background-color: #45A29E;

@@ -13,7 +13,7 @@ const Europe = ({ quizData }) => {
                 <title>Europe | The Space Quiz</title>
                 <meta name="description" content="Quiz on the European space program" />
             </Head>
-            <QuizPanel quizData={quizData} imageUrl={imageUrl} tooltip={tooltip} />;
+            <QuizPanel quizData={quizData} imageUrl={imageUrl} tooltip={tooltip} />
         </>
     );
 };

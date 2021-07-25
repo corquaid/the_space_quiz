@@ -12,7 +12,7 @@ const NewSpace = ({ quizData }) => {
                 <title>Rocket Lab | The Space Quiz</title>
                 <meta name="description" content="Quiz on aerospace newcomers Rocket Lab" />
             </Head>
-            <QuizPanel quizData={quizData} imageUrl={imageUrl} tooltip={tooltip} />;
+            <QuizPanel quizData={quizData} imageUrl={imageUrl} tooltip={tooltip} />
         </>
     );
 };

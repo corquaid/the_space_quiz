@@ -70,22 +70,20 @@ const QuizPanel = ({ quizData, imageUrl, tooltip }) => {
         .replace(/newspace/i, "New Space")
         .replace(/rocketlab/i, "Rocket Lab");
 
-    // Sequential logic for progression through quiz
+    // Sequential logic for progression through quiz with setTimeout to delay transition to next question
     const handleAnswerOptionClick = isCorrect => {
-        if (isCorrect) {
-            setScore(score + 1);
-        }
+        setTimeout(() => {
+            if (isCorrect) {
+                setScore(score + 1);
+            }
 
-        const nextQuestion = currentQuestion + 1;
-        if (nextQuestion < quizData.length) {
-            setCurrentQuestion(nextQuestion);
-        } else {
-            setShowScore(true);
-        }
-    };
-
-    const handleBackClick = () => {
-        setCurrentQuestion(currentQuestion - 1);
+            const nextQuestion = currentQuestion + 1;
+            if (nextQuestion < quizData.length) {
+                setCurrentQuestion(nextQuestion);
+            } else {
+                setShowScore(true);
+            }
+        }, 500);
     };
 
     // Handler function for popup dialog close
