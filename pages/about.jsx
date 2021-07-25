@@ -22,8 +22,7 @@ const about = () => {
                     <p>
                         This website was first created on Wix in Spring 2020, pretty standard stuff. But it helped me to
                         look at web development as a potential career, and as of relaunching the site in Summer 2021,
-                        I've rebuilt the website from the ground up, using Next.Js. I plan on adding new features such
-                        as highscore leaderboards and new quizzes very soon!
+                        I've rebuilt the website from the ground up, using Next.Js. My intention is to improve the site over time with new features and quizzes.
                     </p>
                     <br />
                     <p>

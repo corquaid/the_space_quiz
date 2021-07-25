@@ -35,7 +35,7 @@ const Contact = () => {
                     <h1>Get in touch...</h1>
                     <br />
                     <p>
-                        Thanks for visiting The Space Quiz! If you've enjoyed testing your space knowledge and have a
+                        Thanks for visiting The Space Quiz. If you've enjoyed testing your space knowledge and have a
                         message or some ideas for new quizzes, improvements or even a collaboration in the future,
                         please get in touch. The Space Quiz is on{" "}
                         <a href="https://twitter.com/thespacequiz" target="_blank">

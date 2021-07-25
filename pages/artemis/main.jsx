@@ -44,7 +44,7 @@ const Main = () => {
                 </p>
                 <br />
                 <p className={styles.p}>
-                    Unlike the Apollo era, Artemis will rely not on traditional NASA-owned hardware, such as SLS, but
+                    Unlike the Apollo era, Artemis will rely not only on traditional NASA-owned hardware, such as SLS, but
                     also on the capabilities of the commercial space industry with companies such as SpaceX, Blue
                     Origin, ULA, Sierra Nevada Corporation and Masten Space all involved in a collaborative effort to
                     return to the Moon. Hopefully, this time for good.

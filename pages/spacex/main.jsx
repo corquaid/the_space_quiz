@@ -39,14 +39,14 @@ const Main = () => {
                 </p>
                 <br />
                 <p className={styles.p}>
-                    With reusability and low-cost as key measures of success, SpaceX have reshaped the launch industry
-                    with their now Navary booster landings, reusable cargo and crew spacecraft and most recently, human
+                    With rapid reusability and low-cost as key measures of success, SpaceX have reshaped the launch industry
+                    with their now customary booster landings, reusable cargo and crew spacecraft and most recently, human
                     spaceflight to the ISS.
                 </p>
                 <br />
                 <p className={styles.p}>
                     Perhaps the most important of achievement of SpaceX is to ingite a new wave of interest and wonder
-                    in spaceflight and rocket technology in an industry that can seem stuffy and old-fashioned.
+                    in spaceflight and rocket technology in an industry that can sometimes seem stuffy and old-fashioned.
                 </p>
             </div>
             <div className={styles.buttonBox3}>
