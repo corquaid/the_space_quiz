@@ -10,6 +10,7 @@ export default function Home({ quizCategories }) {
             <Head>
                 <title>Home | The Space Quiz</title>
                 <meta name="description" content="The Best Space Quiz In The Universe" />
+                <meta name="google-site-verification" content="POBhh3Ex_fS3rY8bCRRSXToyy2RV3ag3T0V_T31BUN4" />
                 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
                 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
                 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
