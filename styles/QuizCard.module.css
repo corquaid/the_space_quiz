@@ -24,7 +24,7 @@
     text-align: center;
     width: 100%;
     color: white;
-    font-family: DINPro, sans-serif;
+    font-family: DINProMed, sans-serif;
     font-weight: 400;
     font-size: clamp(16px, 1.5vw, 20px);
 }
