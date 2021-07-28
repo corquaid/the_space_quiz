@@ -29,6 +29,12 @@
 .title {
     font-size: 4.5rem;
     font-family: HelveticaBold, sans-serif;
+    /* text-decoration: none; */
+}
+
+.title a {
+    text-decoration: none;
+    color: inherit;
 }
 
 .linksContainer {

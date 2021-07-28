@@ -21,12 +21,9 @@
     font-size: 24px;
 }
 
-.iconContainer {
-    width: 10%;
-    display: flex;
-    justify-content: flex-end;
+.h3 {
+    font-family: DINProMed, sans-serif;
 }
-
 
 .buttonBox {
     width: 100%;

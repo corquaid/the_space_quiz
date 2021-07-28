@@ -1,6 +1,56 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# The Space Quiz
 
-## Getting Started
+A responsive web application built with Next.js
+
+[Live App](https://thespacequiz.com)
+
+## How I worked on this project
+
+My goal was to simulate a professional development environment and gain experience with the Next.js framework.
+
+-   This Next.js app was built based on previous "no-code" designs made on the Wix platform in 2020 before I started my web dev journey.
+-   I built the codebase in a logical manner, using reusable components where possible and locally-scoped responsive CSS Modules for greater control.
+-   Once the app was deployed to production on Vercel (as an MVP), further improvements are introduced via branches and Pull Requests.
+
+## Project Details
+
+-   Stateful logic is handled through ContextAPI: [Example code](https://github.com/corquaid/the_space_quiz/blob/main/contexts/QuizContext.jsx).
+-   Responsive CSS using CSS Modules: [Example code](https://github.com/corquaid/the_space_quiz/blob/main/styles/Layout.module.css).
+-   Material-UI components (Tooltip, Menu Drawer) are also used and customised through the `makeStyles` custom hook and the `withStyles` HOC APIs: [Example code](https://github.com/corquaid/the_space_quiz/blob/main/components/navbar/CustomListItem.jsx).
+-   The application uses the getServerSideProps async function from Next.js to fetch data from both a MongoDB cluster and an Airtable integration. Examples for the [request](https://github.com/corquaid/the_space_quiz/blob/main/pages/spacex/machines.jsx) and data transformation [Example code inside index.jsx](https://github.com/corquaid/the_space_quiz/blob/main/pages/index.jsx)
+-   Integration tests using React Testing Library: [Link to example test on GitHub]
+
+## Why I built the project this way
+
+-   I wanted to use Next.js for this project as an introduction to the framework, having worked mostly with React previously.
+-   I chose not to use a more complex state management library such as Redux. Context was sufficient for the initial version of the app.
+-   Module-style CSS allows separation of styling for individual components and pages.
+-   I chose MongoDB to host the app data, also as a proper introduction to using this technology.
+
+## Ongoing work on this project (some new features, some housekeeping):
+
+### Functionality Changes
+
+-   [ ] Implement Next.js image optimisation.
+-   [ ] Migrate (at least partially) to TypeScript.
+-   [ ] Add dark/light mode toggle switch.
+-   [ ] Add social media sharing functionality to ScoreModal component.
+-   [ ] Add "Go Back" button and required logic to QuizPanel component.
+-   [ ] Add fix for nodemailer/gmail Production issue.
+-   [ ] Introduce additional testing with Jest / Testing Library.
+
+### Refactoring / Housekeeping
+
+-   [ ] Add Sitemap and robots.txt
+-   [ ] Move HomePage hosted data from Airtable to MongoDB.
+-   [ ] Add quiz question images to MongoDB documents where needed.
+-   [x] Optimise responsive design.
+-   [x] Add ScoreModal score range messages.
+
+-   Set up continuous integration to run the tests and ESLint on every Pull Request
+-   Refactor some of the code. Especially this part [link to code on GitHub]
+
+## Available Scripts
 
 First, run the development server:
 
@@ -11,37 +61,4 @@ yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-
-## TODOs
-
-- [ ] Add dark/light mode toggle switch.
-- [ ] Look at in-screen video clips for each quiz category page
-- [ ] Add quiz question images to mongodb documents where needed
-- [X] Add ScoreModal score range messages
-- [ ] Look again at next/images business
-- [ ] Add social sharing functionality on ScoreModal
-- [X] Tidy up responsive design
-- [ ] Add "Go Back" button and required logic to QuizPanel component
-- [ ] Move HomePage hosted data from airtable to mongodb
-
+[List scripts to start or test the app here]
