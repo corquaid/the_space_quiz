@@ -37,6 +37,10 @@
     margin-bottom: 0;
 }
 
+.info a {
+    text-decoration: none;
+}
+
 .form {
     width: 80%;
     display: flex;
