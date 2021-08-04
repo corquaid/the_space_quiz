@@ -1,8 +1,10 @@
 # The Space Quiz
 
-A responsive web application built with Next.js
+A responsive website built with Next.js
 
-[Live App](https://thespacequiz.com)
+[Live](https://thespacequiz.com)
+
+<img src="https://github.com/corquaid/the_space_quiz/blob/develop/public/readme-images/Screenshot%202021-07-28%20125911.jpg" width="500px"/>
 
 ## How I worked on this project
 
@@ -48,7 +50,7 @@ My goal was to simulate a professional development environment and gain experien
 -   [x] Add ScoreModal score range messages.
 
 -   Set up continuous integration to run the tests and ESLint on every Pull Request
--   Refactor some of the code. Especially this part [link to code on GitHub]
+
 
 ## Available Scripts
 
